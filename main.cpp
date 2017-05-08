@@ -136,14 +136,14 @@ int main(int argc, char *argv[])
 	}
 
 	getch();
-	outtextxy(10, 10, (char *)"save?(y/n)");
 #ifdef __linux
+	outtextxy(10, 10, (char *)"save?(y/n)");
 	refresh();
-#endif // __linux
 
 	if (getch() == 'y') {
 		writeimagefile(argv[1], startx - 10, starty - 10, startx + mazeSize * step + 10, starty + mazeSize * step + 10);
 	}
+#endif // __linux
 
 	return 0;
 }
